@@ -12,6 +12,20 @@ A Django REST Framework API for connecting programmers with open-source projects
 
 
 
+### Clone the Repository
+
+```bash
+
+git clone <repository-url>
+
+cd Greapevine_assesement
+
+```
+
+**Note**: Replace `<repository-url>` with the actual repository URL (e.g., `https://github.com/username/repo.git` or `git@github.com:username/repo.git`)
+
+
+
 ### Prerequisites
 
 
