@@ -327,7 +327,13 @@ class StatsView(APIView):
     permission_classes = [IsAuthenticated]  # User must be logged in
     serializer_class = StatsSerializer
 
-    @extend_schema(responses=StatsSerializer)
+    @extend_schema(
+        operation_id='user_stats',
+        summary='Get user statistics',
+        description='Returns the number of projects created and contributed to by the authenticated user. Only counts actual contributions (not pending interests).',
+        responses={200: StatsSerializer},
+        tags=['Users']
+    )
     def get(self, request):
         """Get statistics for the authenticated user."""
         user = request.user
